@@ -54,8 +54,7 @@ func main() {
 	}
 
 	log.Printf("acl token: %s \n",acltoken.SecretID)
-	log.Printf("acl token ttl: %s \n",acltoken.ExpirationTTL)
-
+	
 	kv := consulctl.KV()
 
 	log.Println("Getting kv using auth method and acl")
