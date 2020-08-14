@@ -26,7 +26,7 @@ spec:
       containers:
         - env:
             - name: CONSUL_HTTP_ADDR
-              value: http://consul-test-consul-server:8500
+              value: http://consul-test-consul-server.prod.svc.cluster.local:8500
           image: viniciusramosdefaria/consul-test:latest
           imagePullPolicy: Always
           name: consul-test
@@ -40,6 +40,4 @@ spec:
           securityContext: {}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
-      serviceAccount: consul-auth
-      serviceAccountName: consul-auth
       terminationGracePeriodSeconds: 30
